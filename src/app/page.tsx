@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -22,8 +23,19 @@ export default function Home() {
             {/* TODO: Create Modal for quote form */}
             Get a quote
           </Button>
+          <div className="relative flex h-[700px] w-full flex-col justify-between">
+            <Image src="/assets/bg.png" alt="Truck Hero" fill className="z-1 absolute" />
+
+            <div className="relative h-1/2 w-full bg-black/50">put image here</div>
+            <Image
+              src="/assets/truck.png"
+              alt="Truck Hero"
+              className="relative z-10 h-1/2 object-contain"
+              width={806}
+              height={610}
+            />
+          </div>
         </div>
-        <div className="flex-shrink-0">image</div>
       </section>
 
       <section className="pb-[500px]" id="services">
