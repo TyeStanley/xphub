@@ -8,7 +8,7 @@ import { menuItems } from '@/constants';
 export default function Nav() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#E3E9FF] bg-white">
-      <div className="mx-auto px-5">
+      <div className="relative mx-auto w-full px-5">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
