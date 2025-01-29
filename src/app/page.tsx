@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { services } from '@/constants';
 import Image from 'next/image';
 
 export default function Home() {
@@ -64,16 +65,53 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pb-[500px]" id="services">
-        <h2>Services</h2>
+      {/* Services Section */}
+      <section
+        id="services"
+        className="my-5 flex w-full flex-col items-center justify-center md:my-12 md:flex-row"
+      >
+        <div className="flex flex-col items-center justify-center px-5 md:w-1/2">
+          <div className="relative flex aspect-square max-w-[450px] flex-col gap-4 rounded border border-[#E0DEF7] bg-[#F7F7FD] p-5">
+            <h2 className="text-lg font-bold text-[#100A55] md:text-xl">
+              From Chemicals to Petroleum: We&apos;ve Got You Covered
+            </h2>
+            <p className="text-xs text-[#100A55] md:text-sm">
+              We specialize in the transportation of a wide variety of liquid bulk products,
+              including:
+            </p>
+            <Image
+              src="/assets/truck-services.png"
+              alt="Truck Services"
+              width={529}
+              height={198}
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 transform object-contain"
+            />
+          </div>
+        </div>
+        <div className="mt-5 flex flex-col items-center justify-center md:mt-0 md:w-1/2">
+          <div className="mx-auto grid grid-cols-1 gap-8 p-5 md:max-w-[800px] lg:grid-cols-2">
+            {services.map((service) => (
+              <div key={service.id} className="flex items-start space-x-4 lg:flex-col lg:space-x-0">
+                <div className="relative h-12 w-12 flex-shrink-0 lg:mb-4 lg:h-16 lg:w-16">
+                  <Image src={service.icon} alt={service.title} fill className="object-contain" />
+                </div>
+                <div className="flex flex-col">
+                  <h3 className="mb-2 font-bold text-[#000929] md:text-lg">{service.title}</h3>
+                  <p className="text-sm text-[#4D5461] md:text-base">{service.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
-      <section className="pb-[500px]" id="why-us">
+
+      <section id="why-us" className="pb-[500px]">
         <h2>Why Us?</h2>
       </section>
-      <section className="pb-[500px]" id="about">
+      <section id="about" className="pb-[500px]">
         <h2>About Us</h2>
       </section>
-      <section className="pb-[500px]" id="availability">
+      <section id="availability" className="pb-[500px]">
         <h2>Availability</h2>
       </section>
     </main>
