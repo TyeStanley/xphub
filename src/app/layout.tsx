@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${plusJakartaSans.variable} mt-[65px] antialiased`}>
+      <body className={`${plusJakartaSans.variable} mt-[65px] overflow-x-hidden antialiased`}>
         <Nav />
         {children}
       </body>

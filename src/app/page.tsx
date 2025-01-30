@@ -321,8 +321,44 @@ export default function Home() {
       </section>
 
       {/* Availability Section */}
-      <section id="availability" className="pb-[500px]">
-        <h2>Availability</h2>
+      <section id="availability" className="w-full bg-white px-5 pt-8 md:relative md:py-20">
+        <div className="mx-auto flex w-full max-w-[1440px] flex-col md:flex-row">
+          <div className="md:z-10 md:w-1/2">
+            <h2 className="text-left text-2xl font-bold text-[#000929]">
+              Trusted & Expert <span className="text-primary">Liquid Bulk Transport</span> You Can
+              Rely On
+            </h2>
+
+            <div className="mt-8">
+              <h3 className="mb-3 text-lg font-bold text-[#000929]">24/7 Service and Support</h3>
+              <p className="text-[#4D5461]">
+                Our dedicated dispatch team is available 24 hours a day, 7 days a week, ensuring
+                that your cargo is monitored and supported at all times.
+              </p>
+              <p className="mt-3 text-[#4D5461]">
+                Whether it&apos;s an update on delivery status or assistance with logistics,
+                we&apos;re always just a phone call away.
+              </p>
+            </div>
+
+            <div className="mt-8">
+              <h3 className="mb-3 text-lg font-bold text-[#000929]">Service Area</h3>
+              <p className="text-[#4D5461]">
+                We serve clients across the United States, ensuring that no matter where your liquid
+                cargo needs to go, Xphub is ready to deliver.
+              </p>
+            </div>
+          </div>
+
+          <div className="relative -mx-7 mt-5 aspect-square w-screen md:absolute md:bottom-0 md:right-0 md:top-0 md:mt-0 md:w-[50%]">
+            <Image
+              src="/assets/availability-map.png"
+              alt="Availability Map"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
