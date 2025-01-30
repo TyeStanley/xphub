@@ -241,14 +241,16 @@ export default function Home() {
       >
         <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row">
           <div className="mb-8 md:mb-0 md:w-1/2">
-            <p className="mb-2 font-bold italic text-primary">ONE MILE AT A TIME</p>
-            <h2 className="text-3xl font-bold text-[#000929]">
-              Delivering Trust & Reliability, One Shipment at a Time
-            </h2>
-            <p className="mt-2 text-[#4D5461]">
-              Hear from the businesses and partners who count on Xphub to transport their liquid
-              cargo with care and precision.
-            </p>
+            <div className="md:max-w-[80%]">
+              <p className="mb-2 font-bold italic text-primary">ONE MILE AT A TIME</p>
+              <h2 className="text-3xl font-bold text-[#000929]">
+                Delivering Trust & Reliability, One Shipment at a Time
+              </h2>
+              <p className="mt-2 text-[#4D5461]">
+                Hear from the businesses and partners who count on Xphub to transport their liquid
+                cargo with care and precision.
+              </p>
+            </div>
           </div>
 
           <Carousel
@@ -312,7 +314,7 @@ export default function Home() {
               })}
             </CarouselContent>
             <div className="hidden w-full md:block">
-              <CarouselPrevious className="absolute -left-12 top-1/2" />
+              <CarouselPrevious className="absolute -left-10 top-1/2" />
             </div>
           </Carousel>
         </div>
