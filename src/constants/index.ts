@@ -110,3 +110,40 @@ export const whyUs = [
     ],
   },
 ];
+
+export const testimonials = [
+  {
+    name: 'Melissa Ackerman',
+    company: 'Auto Matrix',
+    quote:
+      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
+    rating: '4.8',
+    image: '/assets/start-point.png',
+  },
+
+  {
+    name: 'Steve Williamns',
+    company: 'Auto Matrix',
+    quote:
+      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
+    rating: '4.8',
+    image: '/assets/start-point.png',
+  },
+  {
+    name: 'John Doe',
+    company: 'Auto Matrix',
+    quote:
+      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
+    rating: '4.8',
+    image: '/assets/start-point.png',
+  },
+
+  {
+    name: 'John Doe',
+    company: 'Auto Matrix',
+    quote:
+      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
+    rating: '4.8',
+    image: '/assets/start-point.png',
+  },
+];

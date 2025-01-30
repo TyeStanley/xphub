@@ -1,7 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { services, whyUs } from '@/constants';
+import { services, testimonials, whyUs } from '@/constants';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 export default function Home() {
   return (
@@ -225,6 +231,90 @@ export default function Home() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section
+        id="testimonials"
+        className="w-full bg-gradient-to-b from-white to-[#F0EFFB] px-5 py-8 md:py-12"
+      >
+        <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row">
+          <div className="mb-8 md:mb-0 md:w-1/2">
+            <p className="mb-2 font-bold italic text-primary">ONE MILE AT A TIME</p>
+            <h2 className="text-3xl font-bold text-[#000929]">
+              Delivering Trust & Reliability, One Shipment at a Time
+            </h2>
+            <p className="mt-2 text-[#4D5461]">
+              Hear from the businesses and partners who count on Xphub to transport their liquid
+              cargo with care and precision.
+            </p>
+          </div>
+
+          <Carousel
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            className="w-full md:w-1/2"
+          >
+            <CarouselContent className="ml-[-12px] flex w-full gap-2">
+              {testimonials.map((testimonial, index) => {
+                const cardStyle =
+                  index % 2 === 0
+                    ? 'border-primary bg-[rgba(255,224,219,0.30)]'
+                    : 'border-[#FFD789] bg-[rgba(255,232,188,0.30)]';
+
+                return (
+                  <CarouselItem key={index} className="h-full basis-[85%] pl-3 md:pl-5">
+                    <div className={`rounded-xl border-[2px] ${cardStyle} p-5`}>
+                      <div className="mb-5 flex items-start justify-between">
+                        <Image
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                          width={56}
+                          height={56}
+                          className="aspect-square rounded-lg object-contain"
+                        />
+                        <Image
+                          src="/assets/quote.png"
+                          alt="Quote"
+                          width={25}
+                          height={21}
+                          className="object-contain"
+                        />
+                      </div>
+
+                      <h3 className="mb-2.5 whitespace-nowrap text-lg font-semibold text-[#000929]">
+                        {testimonial.name}
+                      </h3>
+
+                      <p className="text-sm text-[#4D5461]">{testimonial.quote}</p>
+
+                      <p className="mt-5 flex items-center whitespace-nowrap">
+                        <Image
+                          src="/assets/star.png"
+                          alt="Star"
+                          width={18}
+                          height={18}
+                          className="object-contain"
+                        />
+                        <span className="ml-1 font-semibold text-[#000929]">
+                          {testimonial.rating}
+                        </span>
+                        <span className="ml-1.5 text-sm text-[#4D5461]">
+                          from {testimonial.company}
+                        </span>
+                      </p>
+                    </div>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <div className="hidden w-full md:block">
+              <CarouselPrevious className="absolute -left-12 top-1/2" />
+            </div>
+          </Carousel>
         </div>
       </section>
 
