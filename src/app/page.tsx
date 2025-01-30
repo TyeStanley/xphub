@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { services } from '@/constants';
+import { services, whyUs } from '@/constants';
 import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   return (
@@ -105,9 +106,63 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-us" className="pb-[500px]">
-        <h2>Why Us?</h2>
+      <section id="why-us" className="bg-[#F7F7FD] px-5 py-8 md:py-12">
+        <h2 className="mb-3 text-center text-3xl font-bold">
+          Why Choose <span className="text-primary">Xphub</span>?
+        </h2>
+        <p className="mb-8 text-center text-[#4D5461] md:mb-12">
+          Our commitment to safety, reliability, and professionalism drives every mile we travel
+        </p>
+
+        <div className="mx-auto grid grid-cols-1 gap-14 md:grid-cols-3 md:gap-8">
+          {whyUs.map((item) => (
+            <div key={item.id} className="flex flex-col">
+              <div className="relative mb-5 aspect-square">
+                <Image src={item.image} alt={item.alt} fill className="rounded-lg object-cover" />
+              </div>
+
+              <h3 className="mb-2 text-xl font-semibold text-[#000929]">{item.title}</h3>
+              <p className="mb-4 text-[#4D5461]">{item.description}</p>
+
+              <div className="flex flex-wrap gap-2">
+                {item.tags.map((tag, index) => {
+                  let tagStyle = '';
+
+                  switch (tag.text) {
+                    case 'Certified Safe':
+                      tagStyle = 'bg-green-100 text-green-800';
+                      break;
+                    case 'On-Time Delivery':
+                      tagStyle = 'bg-amber-100 text-amber-800';
+                      break;
+                    case 'Tech-Driven':
+                      tagStyle = 'bg-blue-100 text-blue-800';
+                      break;
+                    case 'Fully Insured':
+                      tagStyle = 'bg-pink-100 text-pink-800';
+                      break;
+                    case 'Community Trusted':
+                      tagStyle = 'bg-purple-100 text-purple-800';
+                      break;
+                    case 'Personal Touch':
+                      tagStyle = 'bg-indigo-100 text-indigo-800';
+                      break;
+                    default:
+                      tagStyle = 'bg-gray-100 text-gray-800';
+                  }
+
+                  return (
+                    <span key={index} className={cn('rounded-full px-3 py-1 text-sm', tagStyle)}>
+                      {tag.text}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
+
       <section id="about" className="pb-[500px]">
         <h2>About Us</h2>
       </section>
