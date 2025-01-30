@@ -67,38 +67,100 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section
-        id="services"
-        className="my-5 flex w-full flex-col items-center justify-center md:my-12 md:flex-row"
-      >
-        <div className="flex flex-col items-center justify-center px-5 md:w-1/2">
-          <div className="relative flex aspect-square max-w-[450px] flex-col gap-4 rounded border border-[#E0DEF7] bg-[#F7F7FD] p-5">
-            <h2 className="text-lg font-bold text-[#100A55] md:text-xl">
-              From Chemicals to Petroleum: We&apos;ve Got You Covered
-            </h2>
-            <p className="text-xs text-[#100A55] md:text-sm">
-              We specialize in the transportation of a wide variety of liquid bulk products,
-              including:
-            </p>
-            <Image
-              src="/assets/truck-services.png"
-              alt="Truck Services"
-              width={529}
-              height={198}
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 transform object-contain"
-            />
+      <section id="services" className="my-5 w-full px-5 md:my-12">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center md:flex-row md:justify-between">
+          <div className="flex md:w-1/2 md:justify-between">
+            <div className="relative flex aspect-square flex-col gap-4 rounded border border-[#E0DEF7] bg-[#F7F7FD] p-5">
+              <h2 className="z-10 mt-3 text-lg font-bold text-[#100A55] sm:mt-10 sm:text-3xl md:mt-2 md:text-lg lg:mt-7 lg:text-2xl">
+                From Chemicals to Petroleum: We&apos;ve Got You Covered
+              </h2>
+              <p className="z-10 text-xs text-[#100A55] sm:text-base md:text-sm lg:text-base">
+                We specialize in the transportation of a wide variety of liquid bulk products,
+                including:
+              </p>
+              <Image
+                src="/assets/truck-services.png"
+                alt="Truck Services"
+                width={529}
+                height={198}
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 transform object-contain"
+              />
+            </div>
+          </div>
+          <div className="mt-5 flex flex-col items-center justify-center md:mt-0 md:w-1/2">
+            <div className="mx-auto grid grid-cols-1 gap-8 p-5 md:max-w-[800px] lg:grid-cols-2">
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  className="flex items-start space-x-4 lg:flex-col lg:space-x-0"
+                >
+                  <div className="relative h-12 w-12 flex-shrink-0 lg:mb-4 lg:h-16 lg:w-16">
+                    <Image src={service.icon} alt={service.title} fill className="object-contain" />
+                  </div>
+                  <div className="flex flex-col">
+                    <h3 className="mb-2 font-bold text-[#000929] md:text-lg">{service.title}</h3>
+                    <p className="text-sm text-[#4D5461] md:text-base">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="mt-5 flex flex-col items-center justify-center md:mt-0 md:w-1/2">
-          <div className="mx-auto grid grid-cols-1 gap-8 p-5 md:max-w-[800px] lg:grid-cols-2">
-            {services.map((service) => (
-              <div key={service.id} className="flex items-start space-x-4 lg:flex-col lg:space-x-0">
-                <div className="relative h-12 w-12 flex-shrink-0 lg:mb-4 lg:h-16 lg:w-16">
-                  <Image src={service.icon} alt={service.title} fill className="object-contain" />
+      </section>
+
+      {/* Why Us Section */}
+      <section id="why-us" className="w-full bg-[#F7F7FD] px-5 py-8 md:py-12">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center">
+          <h2 className="mb-3 text-center text-3xl font-bold">
+            Why Choose <span className="text-primary">Xphub</span>?
+          </h2>
+          <p className="mb-8 text-center text-[#4D5461] md:mb-12">
+            Our commitment to safety, reliability, and professionalism drives every mile we travel
+          </p>
+
+          <div className="mx-auto grid grid-cols-1 gap-14 md:grid-cols-3 md:gap-8">
+            {whyUs.map((item) => (
+              <div key={item.id} className="flex flex-col">
+                <div className="relative mb-5 aspect-square">
+                  <Image src={item.image} alt={item.alt} fill className="rounded-lg object-cover" />
                 </div>
-                <div className="flex flex-col">
-                  <h3 className="mb-2 font-bold text-[#000929] md:text-lg">{service.title}</h3>
-                  <p className="text-sm text-[#4D5461] md:text-base">{service.description}</p>
+
+                <h3 className="mb-2 text-xl font-semibold text-[#000929]">{item.title}</h3>
+                <p className="mb-4 text-[#4D5461]">{item.description}</p>
+
+                <div className="flex flex-wrap gap-2">
+                  {item.tags.map((tag, index) => {
+                    let tagStyle = '';
+
+                    switch (tag.text) {
+                      case 'Certified Safe':
+                        tagStyle = 'bg-green-100 text-green-800';
+                        break;
+                      case 'On-Time Delivery':
+                        tagStyle = 'bg-amber-100 text-amber-800';
+                        break;
+                      case 'Tech-Driven':
+                        tagStyle = 'bg-blue-100 text-blue-800';
+                        break;
+                      case 'Fully Insured':
+                        tagStyle = 'bg-pink-100 text-pink-800';
+                        break;
+                      case 'Community Trusted':
+                        tagStyle = 'bg-purple-100 text-purple-800';
+                        break;
+                      case 'Personal Touch':
+                        tagStyle = 'bg-indigo-100 text-indigo-800';
+                        break;
+                      default:
+                        tagStyle = 'bg-gray-100 text-gray-800';
+                    }
+
+                    return (
+                      <span key={index} className={cn('rounded-full px-3 py-1 text-sm', tagStyle)}>
+                        {tag.text}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             ))}
@@ -106,66 +168,67 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="why-us" className="bg-[#F7F7FD] px-5 py-8 md:py-12">
-        <h2 className="mb-3 text-center text-3xl font-bold">
-          Why Choose <span className="text-primary">Xphub</span>?
-        </h2>
-        <p className="mb-8 text-center text-[#4D5461] md:mb-12">
-          Our commitment to safety, reliability, and professionalism drives every mile we travel
-        </p>
+      {/* About Section */}
+      <section id="about" className="w-full px-5 py-8 md:py-12">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center">
+          <h2 className="mb-2 text-3xl font-bold">
+            About <span className="text-primary">Xphub</span>
+          </h2>
+          <p className="mb-8 max-w-[800px] text-[#475467] md:mb-12">
+            With over 30 years of family history in the industry, Xphub continues our legacy as a
+            trusted partner in liquid bulk transport, specializing in the safe and timely delivery
+            of liquid goods across the United States.
+          </p>
 
-        <div className="mx-auto grid grid-cols-1 gap-14 md:grid-cols-3 md:gap-8">
-          {whyUs.map((item) => (
-            <div key={item.id} className="flex flex-col">
-              <div className="relative mb-5 aspect-square">
-                <Image src={item.image} alt={item.alt} fill className="rounded-lg object-cover" />
+          <div className="flex w-full flex-col-reverse gap-8 md:flex-row md:justify-between">
+            <div className="flex flex-col gap-8 md:w-1/2">
+              <div className="space-y-5 border-l-4 border-primary py-2 pl-4">
+                <h3 className="text-xl font-bold">About</h3>
+                <p className="text-[#4D5461]">
+                  Started in 2025, Xphub has become a trusted partner in liquid bulk transport,
+                  specializing in the safe and timely delivery of liquid goods across the United
+                  States.
+                </p>
+                <p className="text-[#4D5461]">
+                  Our family-operated business is built on a foundation of trust, reliability, and
+                  an unwavering commitment to safety.
+                </p>
               </div>
 
-              <h3 className="mb-2 text-xl font-semibold text-[#000929]">{item.title}</h3>
-              <p className="mb-4 text-[#4D5461]">{item.description}</p>
+              <div className="space-y-5 border-l-4 border-primary py-2 pl-4">
+                <h3 className="text-xl font-bold">Our Values</h3>
 
-              <div className="flex flex-wrap gap-2">
-                {item.tags.map((tag, index) => {
-                  let tagStyle = '';
+                <p className="text-[#4D5461]">
+                  <span className="font-semibold text-[#000929]">Integrity: </span>
+                  We believe in doing business honestly and transparently.
+                </p>
 
-                  switch (tag.text) {
-                    case 'Certified Safe':
-                      tagStyle = 'bg-green-100 text-green-800';
-                      break;
-                    case 'On-Time Delivery':
-                      tagStyle = 'bg-amber-100 text-amber-800';
-                      break;
-                    case 'Tech-Driven':
-                      tagStyle = 'bg-blue-100 text-blue-800';
-                      break;
-                    case 'Fully Insured':
-                      tagStyle = 'bg-pink-100 text-pink-800';
-                      break;
-                    case 'Community Trusted':
-                      tagStyle = 'bg-purple-100 text-purple-800';
-                      break;
-                    case 'Personal Touch':
-                      tagStyle = 'bg-indigo-100 text-indigo-800';
-                      break;
-                    default:
-                      tagStyle = 'bg-gray-100 text-gray-800';
-                  }
+                <p className="text-[#4D5461]">
+                  <span className="font-semibold text-[#000929]">Safety: </span>
+                  Our commitment to safety is at the core of everything we do.
+                </p>
 
-                  return (
-                    <span key={index} className={cn('rounded-full px-3 py-1 text-sm', tagStyle)}>
-                      {tag.text}
-                    </span>
-                  );
-                })}
+                <p className="text-[#4D5461]">
+                  <span className="font-semibold text-[#000929]">Customer Service: </span>
+                  We strive to build long-lasting relationships with our clients through exceptional
+                  service.
+                </p>
               </div>
             </div>
-          ))}
+
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:w-1/2">
+              <Image
+                src="/assets/about-us.png"
+                alt="Xphub transport truck"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="about" className="pb-[500px]">
-        <h2>About Us</h2>
-      </section>
+      {/* Availability Section */}
       <section id="availability" className="pb-[500px]">
         <h2>Availability</h2>
       </section>
