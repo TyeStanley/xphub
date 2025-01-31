@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { services, testimonials, whyUs } from '@/constants';
+import { menuItems, services, testimonials, whyUs } from '@/constants';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import {
@@ -8,6 +8,8 @@ import {
   CarouselItem,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import SmoothScrollLink from '@/components/SmoothScrollLink';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -393,6 +395,59 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Footer Section */}
+      <footer id="footer" className="w-full bg-white px-5 py-8 md:py-12">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="flex flex-col items-center md:flex-row md:items-start md:justify-between">
+            <div className="flex flex-col items-center gap-5 md:items-start">
+              <Image
+                src="/assets/xphub-logo.png"
+                alt="Xphub Logo"
+                width={120}
+                height={40}
+                className="object-contain"
+              />
+
+              <nav className="flex flex-wrap items-center gap-5 text-sm font-medium text-[#000929] md:h-[21px] md:flex-row md:items-start md:gap-8">
+                {menuItems.map((item) => (
+                  <SmoothScrollLink key={item.href} href={item.href}>
+                    {item.label}
+                  </SmoothScrollLink>
+                ))}
+              </nav>
+            </div>
+
+            <div className="mt-7 flex h-[83px] flex-col items-center gap-5 md:mt-0 md:items-start md:justify-between">
+              <div className="flex gap-7">
+                <Link href="#">
+                  <Image src="/assets/socials/twitter.png" alt="Twitter" width={24} height={24} />
+                </Link>
+                <Link href="#">
+                  <Image src="/assets/socials/linkedin.png" alt="LinkedIn" width={24} height={24} />
+                </Link>
+                <Link href="#">
+                  <Image src="/assets/socials/facebook.png" alt="Facebook" width={24} height={24} />
+                </Link>
+              </div>
+
+              <p className="flex items-center gap-2 text-center text-sm font-medium text-[#000929] md:text-right">
+                <Image src="/assets/marker.png" alt="Marker" width={16} height={16} />
+                Houston, TX
+              </p>
+            </div>
+          </div>
+
+          <div className="my-8 flex flex-col items-center gap-5 border-t border-[#EAECF0] pt-8 text-sm text-[#4D5461] md:flex-row md:justify-between">
+            <p>© 2025 XPHUB. All rights reserved.</p>
+            <div className="flex gap-7">
+              <Link href="#footer">Terms</Link>
+              <Link href="#footer">Privacy</Link>
+              <Link href="#footer">Cookies</Link>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
