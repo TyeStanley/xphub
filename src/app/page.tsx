@@ -360,6 +360,39 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="w-full bg-[#F7F7FD] px-5 py-12">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="rounded-xl border-[2px] border-primary bg-[rgba(255,224,219,0.40)] p-8 md:flex md:items-center md:justify-between">
+            <div className="md:w-1/2 md:max-w-[500px]">
+              <h2 className="text-3xl font-bold text-[#000929]">Request a Quote</h2>
+              <p className="mt-4 text-[#4D5461]">
+                We make it easy to get started. Simply request a quote, and our team will provide
+                you with a tailored solution that meets your specific needs.
+              </p>
+              <Button className="mt-5 w-full bg-primary text-white">Get a quote</Button>
+            </div>
+
+            <div className="relative -mx-8 md:w-1/2">
+              <Image
+                src="/assets/quote-truck-mobile.png"
+                alt="Transport Truck"
+                width={356}
+                height={175}
+                className="relative top-5 w-full object-contain md:hidden"
+              />
+              <Image
+                src="/assets/quote-truck.png"
+                alt="Transport Truck"
+                width={736}
+                height={352}
+                className="hidden md:block"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
