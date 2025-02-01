@@ -5,6 +5,7 @@ import { Button } from './ui/button';
 import SmoothScrollLink from './SmoothScrollLink';
 import { Menu } from 'lucide-react';
 import { menuItems } from '@/constants';
+import RequestQuoteButton from './RequestQuoteButton';
 
 const MobileNavModal = () => {
   const [open, setOpen] = useState(false);
@@ -38,10 +39,7 @@ const MobileNavModal = () => {
             </div>
 
             <div className="border-t border-[#E3E9FF] pt-5">
-              <Button className="w-full bg-primary py-6 text-left font-semibold text-white">
-                {/* TODO: Create Modal for quote form */}
-                Get a quote
-              </Button>
+              <RequestQuoteButton className="w-full py-6 text-left font-semibold" />
             </div>
           </div>
         </>

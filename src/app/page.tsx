@@ -120,7 +120,7 @@ export default function Home() {
       <section id="why-us" className="w-full bg-[#F7F7FD] px-5 py-8 md:py-12">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center">
           <h2 className="mb-3 text-center text-3xl font-bold">
-            Why Choose <span className="text-primary">Xphub</span>?
+            Why Choose <span className="text-primary">XPHUB</span>?
           </h2>
           <p className="mb-8 text-center text-[#4D5461] md:mb-12">
             Our commitment to safety, reliability, and professionalism drives every mile we travel
@@ -180,12 +180,13 @@ export default function Home() {
       <section id="about" className="w-full px-5 py-8 md:py-12">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-center">
           <h2 className="mb-2 text-3xl font-bold">
-            About <span className="text-primary">Xphub</span>
+            About <span className="text-primary">XPHUB</span>
           </h2>
           <p className="mb-8 max-w-[800px] text-[#475467] md:mb-12">
-            With over 30 years of family history in the industry, Xphub continues our legacy as a
-            trusted partner in liquid bulk transport, specializing in the safe and timely delivery
-            of liquid goods across the United States.
+            With over 30 years of family history in the industry,{' '}
+            <span className="text-primary">XPHUB</span> continues our legacy as a trusted partner in
+            liquid bulk transport, specializing in the safe and timely delivery of liquid goods
+            across the United States.
           </p>
 
           <div className="flex w-full flex-col-reverse gap-8 md:flex-row md:justify-between">
@@ -193,9 +194,9 @@ export default function Home() {
               <div className="space-y-5 border-l-4 border-primary py-2 pl-4">
                 <h3 className="text-xl font-bold">About</h3>
                 <p className="text-[#4D5461]">
-                  Started in 2025, Xphub has become a trusted partner in liquid bulk transport,
-                  specializing in the safe and timely delivery of liquid goods across the United
-                  States.
+                  Started in 2025, <span className="text-primary">XPHUB</span> has become a trusted
+                  partner in liquid bulk transport, specializing in the safe and timely delivery of
+                  liquid goods across the United States.
                 </p>
                 <p className="text-[#4D5461]">
                   Our family-operated business is built on a foundation of trust, reliability, and
@@ -249,8 +250,9 @@ export default function Home() {
                 Delivering Trust & Reliability, One Shipment at a Time
               </h2>
               <p className="mt-2 text-[#4D5461]">
-                Hear from the businesses and partners who count on Xphub to transport their liquid
-                cargo with care and precision.
+                Hear from the businesses and partners who count on{' '}
+                <span className="text-primary">XPHUB</span> to transport their liquid cargo with
+                care and precision.
               </p>
             </div>
           </div>
@@ -347,7 +349,7 @@ export default function Home() {
               <h3 className="mb-3 text-lg font-bold text-[#000929]">Service Area</h3>
               <p className="text-[#4D5461]">
                 We serve clients across the United States, ensuring that no matter where your liquid
-                cargo needs to go, Xphub is ready to deliver.
+                cargo needs to go, <span className="text-primary">XPHUB</span> is ready to deliver.
               </p>
             </div>
           </div>

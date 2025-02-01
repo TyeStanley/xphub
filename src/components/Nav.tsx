@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import SmoothScrollLink from './SmoothScrollLink';
 import MobileNavModal from './MobileNavModal';
 import { menuItems } from '@/constants';
+import RequestQuoteButton from './RequestQuoteButton';
 
 export default function Nav() {
   return (
@@ -32,11 +32,7 @@ export default function Nav() {
             ))}
           </div>
 
-          {/* Get a quote button */}
-          <Button className="hidden bg-primary text-white md:flex">
-            {/* TODO: Create Modal for quote form */}
-            Get a quote
-          </Button>
+          <RequestQuoteButton className="hidden md:flex" />
 
           <MobileNavModal />
         </div>

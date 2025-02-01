@@ -1,3 +1,5 @@
+import { QuoteFormData } from '@/components/QuoteModal';
+
 export const menuItems = [
   {
     label: 'Services',
@@ -146,4 +148,89 @@ export const testimonials = [
     rating: '4.8',
     image: '/assets/start-point.png',
   },
+];
+
+type FormField = {
+  name: keyof QuoteFormData;
+  label: string;
+  placeholder: string;
+  type: string;
+  required: string;
+  pattern?: { value: RegExp; message: string };
+  note?: string;
+};
+
+export const formFields: FormField[][] = [
+  [
+    {
+      name: 'companyName',
+      label: 'Company Name',
+      placeholder: 'Name of your company',
+      type: 'text',
+      required: 'Company name is required',
+    },
+    {
+      name: 'contactName',
+      label: 'Contact Name',
+      placeholder: 'Name of the contact person',
+      type: 'text',
+      required: 'Contact name is required',
+    },
+  ],
+  [
+    {
+      name: 'email',
+      label: 'Email Address',
+      placeholder: 'Enter your email address',
+      type: 'email',
+      required: 'Email is required',
+
+      pattern: {
+        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        message: 'Invalid email address',
+      },
+    },
+    {
+      name: 'phone',
+      label: 'Phone Number',
+      placeholder: 'Enter your phone number',
+      type: 'tel',
+      required: 'Phone number is required',
+    },
+  ],
+  [
+    {
+      name: 'commodityType',
+      label: 'Commodity Type',
+      placeholder: 'Type of goods being transported',
+      type: 'text',
+      required: 'Commodity type is required',
+      note: '* Note: We transport non-hazardous commodity only',
+    },
+  ],
+  [
+    {
+      name: 'pickupLocation',
+      label: 'Pickup Location (City, State)',
+      placeholder: 'City, State (e.g., Dallas, TX)',
+      type: 'text',
+      required: 'Pickup location is required',
+      pattern: {
+        value: /^[A-Za-z\s]+,\s*[A-Z]{2}$/i,
+        message: 'Please enter in format: City, ST (e.g., Houston, TX)',
+      },
+    },
+    {
+      name: 'deliveryLocation',
+      label: 'Delivery Location (City, State)',
+      placeholder: 'City, State (e.g., Dallas, TX)',
+      type: 'text',
+      required: 'Delivery location is required',
+
+      pattern: {
+        value: /^[A-Za-z\s]+,\s*[A-Z]{2}$/i,
+        message: 'Please enter in format: City, ST (e.g., Houston, TX)',
+      },
+    },
+  ],
 ];
