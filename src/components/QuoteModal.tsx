@@ -42,12 +42,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
 
   const onSubmit = async (data: QuoteFormData) => {
     try {
-      console.log(data);
-      // const result = await sendQuoteRequest(data);
-      const result = { success: true };
+      const result = await sendQuoteRequest(data);
       if (result.success) {
-        reset();
         setIsSuccess(true);
+        reset();
       } else {
         console.error('Failed to send quote request');
       }
