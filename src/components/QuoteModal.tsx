@@ -11,6 +11,7 @@ import { useForm } from 'react-hook-form';
 import { X } from 'lucide-react';
 import { formFields } from '@/constants';
 import Image from 'next/image';
+import { sendQuoteRequest } from '@/lib/actions/sendEmail';
 
 export type QuoteFormData = {
   companyName: string;
@@ -37,10 +38,17 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   } = useForm<QuoteFormData>();
 
   const onSubmit = async (data: QuoteFormData) => {
-    console.log(data);
-    // Handle form submission here
-    reset();
-    onClose();
+    try {
+      const result = await sendQuoteRequest(data);
+      if (result.success) {
+        reset();
+        onClose();
+      } else {
+        console.error('Failed to send quote request');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
