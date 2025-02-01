@@ -12,10 +12,7 @@ export default function RequestQuoteButton({ className }: { className?: string }
     <>
       <Button
         onClick={() => setIsModalOpen(true)}
-        className={cn(
-          'w-full rounded-lg bg-primary text-white hover:bg-[#991818] md:w-auto',
-          className,
-        )}
+        className={cn('w-full rounded-lg bg-primary text-white hover:bg-[#991818]', className)}
       >
         Get a quote
       </Button>

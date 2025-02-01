@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import { menuItems, services, testimonials, whyUs } from '@/constants';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -10,6 +9,7 @@ import {
 } from '@/components/ui/carousel';
 import SmoothScrollLink from '@/components/SmoothScrollLink';
 import Link from 'next/link';
+import RequestQuoteButton from '@/components/RequestQuoteButton';
 
 export default function Home() {
   return (
@@ -32,11 +32,7 @@ export default function Home() {
               destination safely and on time.
             </p>
 
-            {/* Get a quote button */}
-            <Button className="mt-3 w-full bg-primary text-white">
-              {/* TODO: Create Modal for quote form */}
-              Get a quote
-            </Button>
+            <RequestQuoteButton className="mt-3" />
           </div>
         </div>
 
@@ -375,7 +371,8 @@ export default function Home() {
                 We make it easy to get started. Simply request a quote, and our team will provide
                 you with a tailored solution that meets your specific needs.
               </p>
-              <Button className="mt-5 w-full bg-primary text-white">Get a quote</Button>
+
+              <RequestQuoteButton className="mt-5" />
             </div>
 
             <div className="relative -mx-8 md:w-1/2">

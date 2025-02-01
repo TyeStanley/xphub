@@ -39,7 +39,7 @@ const MobileNavModal = () => {
             </div>
 
             <div className="border-t border-[#E3E9FF] pt-5">
-              <RequestQuoteButton className="w-full py-6 text-left font-semibold" />
+              <RequestQuoteButton className="py-6 font-semibold" />
             </div>
           </div>
         </>

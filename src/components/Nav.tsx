@@ -32,7 +32,7 @@ export default function Nav() {
             ))}
           </div>
 
-          <RequestQuoteButton className="hidden md:flex" />
+          <RequestQuoteButton className="hidden md:flex md:w-auto" />
 
           <MobileNavModal />
         </div>
