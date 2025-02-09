@@ -115,37 +115,35 @@ export const whyUs = [
 
 export const testimonials = [
   {
-    name: 'Melissa Ackerman',
-    company: 'Auto Matrix',
+    name: 'Client Name 1',
+    company: 'Company A',
     quote:
-      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
-    rating: '4.8',
-    image: '/assets/start-point.png',
-  },
-
-  {
-    name: 'Steve Williamns',
-    company: 'Auto Matrix',
-    quote:
-      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
-    rating: '4.8',
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    rating: '4.9',
     image: '/assets/start-point.png',
   },
   {
-    name: 'John Doe',
-    company: 'Auto Matrix',
+    name: 'Client Name 2',
+    company: 'Company B',
     quote:
-      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
+      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     rating: '4.8',
     image: '/assets/start-point.png',
   },
-
   {
-    name: 'John Doe',
-    company: 'Auto Matrix',
+    name: 'Client Name 3',
+    company: 'Company C',
     quote:
-      "Xphub's service has been our go-to for liquid bulk transport for years. Their commitment to safety and reliability is unmatched",
-    rating: '4.8',
+      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    rating: '4.7',
+    image: '/assets/start-point.png',
+  },
+  {
+    name: 'Client Name 4',
+    company: 'Company D',
+    quote:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    rating: '4.9',
     image: '/assets/start-point.png',
   },
 ];
