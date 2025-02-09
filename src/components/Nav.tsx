@@ -7,10 +7,11 @@ import RequestQuoteButton from './RequestQuoteButton';
 
 export default function Nav() {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#E3E9FF] bg-white">
-      <div className="relative mx-auto w-full px-5 lg:px-10">
+    <nav className="fixed left-0 right-0 top-0 z-50 border-b border-[#E3E9FF] bg-white px-5">
+      <div className="relative mx-auto w-full max-w-7xl">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
+
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
