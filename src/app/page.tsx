@@ -35,7 +35,7 @@ export default function Home() {
           </div>
 
           <div className="relative mt-5 w-full md:mt-0 md:w-1/2">
-            <div className="absolute inset-0 w-screen bg-[url('/assets/map-bg.png')] bg-cover bg-center" />
+            <div className="absolute inset-0 w-screen bg-[url('/assets/map-bg-fade.png')] bg-cover bg-center" />
             <div className="relative">
               <div className="relative top-[10px] mx-auto flex w-[350px] justify-between md:top-[20px] xl:right-[70px] xl:top-[40px]">
                 <Image
