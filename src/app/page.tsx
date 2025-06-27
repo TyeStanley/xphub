@@ -434,7 +434,7 @@ export default function Home() {
 
               <p className="flex items-center gap-2 text-center text-sm font-medium text-[#000929] md:text-right">
                 <Image src="/assets/marker.png" alt="Marker" width={16} height={16} />
-                Houston, TX
+                Las Vegas, NV
               </p>
             </div>
           </div>
