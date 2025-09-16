@@ -17,7 +17,7 @@ A modern, responsive website showcasing professional web development skills thro
 - [Key Highlights](#-key-highlights)
 - [Performance & Optimization](#-performance--optimization)
 - [Portfolio Context](#-portfolio-context)
-- [Developer Information](#-developer-information)
+- [About the Developer](#-about-the-developer)
 
 ## ✨ Features
 
@@ -130,15 +130,16 @@ src/
 
 4. **Run the development server**
 
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
 5. **Open your browser**
+
    Navigate to [http://localhost:3000](http://localhost:3000)
 
 ### Build for Production
