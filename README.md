@@ -4,7 +4,7 @@ A modern, responsive website showcasing professional web development skills thro
 
 ## 🌐 Live Demo
 
-**🔗 [View Live Website](https://xphub.com/)**
+**🔗 [View Live Website](https://xphub.us/)**
 
 > **Note**: This is a portfolio showcase project demonstrating web development skills and is not affiliated with any actual business.
 
